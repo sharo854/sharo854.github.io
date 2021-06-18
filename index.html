@@ -95,6 +95,17 @@
 
   <h2>githubセッティング</h2>
   <pre>
+sudo apt install git
+
+リポジトリURL
+作りたてのページの Quick setup か リポジトリホームの右上の Clone or download の中にある
+git@github.com:sharo854/iot_server.git
+
+個人情報の設定
+git config --global user.name hyo
+git config --global user.email serinuntiusu@yahoo.co.jp
+
+
 init git
 git add index.html
 git commit -m "コミットメッセージ"
@@ -106,12 +117,27 @@ git pull origin master
 git status
 git diff
 git log
-git log -p	Q
+
+現在の設定を確認
+git config --list
 
 git remote set-url origin リモートリポジトリのURL
 git remote -v
   </pre>
   
+
+  <h2>vscode</h2>
+  <pre>
+  F1 キーを押してコマンド パレット
+  </pre>
+
+  <h2>ubuntu</h2>
+  <pre>
+秘密鍵・公開鍵生成
+ssh-keygen
+  </pre>
+
+
   <p>OK!!!</p>
 
   <h2 id="plant">植物</h2>
