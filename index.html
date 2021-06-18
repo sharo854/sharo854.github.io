@@ -112,7 +112,19 @@ git commit -m "コミットメッセージ"
 git remote add origin リモートリポジトリのURL
 git push origin master
 
+アップロード
+git add -A
+git commit -m "コミットメッセージ"
+git push origin master
+もしくは
+git push origin main
+各自のブランチを参照すること
+
+ダウンロード
 git pull origin master
+もしくは
+git pull origin main
+各自のブランチを参照すること
 
 git status
 git diff
@@ -128,13 +140,43 @@ git remote -v
 
   <h2>vscode</h2>
   <pre>
-  F1 キーを押してコマンド パレット
+F1 キーを押してコマンド パレット
+gitclone
   </pre>
 
   <h2>ubuntu</h2>
   <pre>
 秘密鍵・公開鍵生成
 ssh-keygen
+  </pre>
+
+  <h2>Node.js</h2>
+  <pre>
+sudo apt install nodejs
+
+Node.js をインストールしたかどうか確認
+nodejs -v
+nodejs -v
+
+ファイル実行方法
+node [ファイル名.js]
+
+
+パッケージをインストールするのに必要
+sudo apt install npm
+
+npm をインストールしたかどうか確認
+npm -v
+
+npm init
+
+express をインストール
+npm install express --save
+
+ejs をインストール
+npm install ejs
+views ディレクトリの下に.ejsファイルを入れること
+
   </pre>
 
 
