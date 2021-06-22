@@ -149,6 +149,21 @@ gitclone
 秘密鍵・公開鍵生成
 ssh-keygen
   </pre>
+  <h2>minecraft</h2>
+  <pre>
+    screen -r mct
+    cd bedrock-server-1.17.0.03
+    LD_LIBRARY_PATH=. screen -dmS mct ./bedrock_server
+  </pre>
+
+  <h2>mysql</h2>
+  <pre>
+
+    
+    insert into attendance values ('上野', 1);
+    select * from attendance;
+    update attendance set user="てい" where user="Tei";
+  </pre>
 
   <h2>Node.js</h2>
   <pre>
@@ -160,6 +175,8 @@ nodejs -v
 
 ファイル実行方法
 node [ファイル名.js]
+node app.js
+screen -dmS iot node app.js
 
 
 パッケージをインストールするのに必要
@@ -177,6 +194,17 @@ ejs をインストール
 npm install ejs
 views ディレクトリの下に.ejsファイルを入れること
 
+定時実行
+npm install node-cron
+
+サーバ落ちないように
+sudo npm install pm2 -g
+pm2 start app.js
+pm2 start app.js --watch  自動再読み込み
+pm2 stop app.js
+
+screen -dmS iot pm2 start app.js
+screen -dmS iot pm2 start app.js　--watch
   </pre>
 
 
