@@ -261,7 +261,46 @@ screen -dmS iot pm2 start app.js　--watch
   </pre>
 
 
-  <p>OK!!!</p>
+  <p>sudo apt install python3-pip</p>
+
+  <h2 id="swap">swap領域作成</h2>
+  <pre>
+
+パーティションとファイルに作る2つの方法がある。
+
+ファイル作成による方法
+sudo dd if=/dev/zero of=/var/swapfile bs=1M count=4000
+sudo mkswap /var/swapfile
+sudo chmod 600 /var/swapfile
+
+自動マウント
+/etc/fstab
+最終行
+/var/swapfile none swap swap 0 0
+
+手動マウント
+sudo swapon /var/swapfile
+
+  </pre>
+  <h2 id="swap">samba</h2>
+  <pre>
+
+[global]
+workgroup = SHELLMAG
+dos charset = CP932
+unix charset = UTF8
+
+[share]
+comment = Ubuntu Server
+path = /var/share
+browsable = yes
+writable = yes
+create mask = 0777
+directory mask = 0777
+
+  </pre>
+
+
 
   <h2 id="plant">植物</h2>
   <pre>
