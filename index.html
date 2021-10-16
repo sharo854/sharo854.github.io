@@ -144,6 +144,7 @@ git pull origin main
 git status
 git diff
 git log
+git log -p	Q
 
 現在の設定を確認
 git config --list
@@ -210,12 +211,50 @@ ssh-keygen
 
   <h2>mysql</h2>
   <pre>
-
+    brew services start mysql@5.7
+    mysql --user=root --password
+    exit;
+    brew services stop mysql@5.7
+    
+    
+    SHOW databases;
+    CREATE DATABASE progate;
+    
+    SHOW tables;
+    DESCRIBE users;
+    
+    DROP TABLE users;
+    DROP DATABASE progate;
+    
+    
+    node app.js
+    
+    ctrl+c
+    
+    
+    
+    Rails new プロジェクト名
+    rails generate controller コントローラ名 アクション名
+    
+    rails g model テーブル名（単数形） カラム名:データ型 (続けて書く場合カンマいらない)
+    rails db:migrate
+    
+    rails console
+    
+    Post = Post.new(context:"qweyuio")
+    Post.save
+    
+    
+    rails g migration わかりやすいファイル名
+    add_column :users, :password, :string
     
 ALTER TABLE テーブル名 ADD 新規カラム名 型情報 オプション;
     insert into attendance values ('上野', 1);
     select * from attendance;
     update attendance set user="てい" where user="Tei";
+
+
+
   </pre>
 
   <h2>Node.js</h2>
